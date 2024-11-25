@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Tracker</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Add your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Stock Portfolio Tracker</h1>
+        <nav>
+            <a href="{% url 'portfolio' %}">Home</a>
+            <a href="{% url 'add_stock' %}">Add Stock</a>
+            <a href="{% url 'remove_stock' %}">Remove Stock</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Content specific to each page goes here -->
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Stock Portfolio Tracker</p>
+    </footer>
+</body>
+</html>
